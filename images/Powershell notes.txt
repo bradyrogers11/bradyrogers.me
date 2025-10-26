@@ -1,0 +1,67 @@
+
+
+get-childitem c:\ -recurse  								does a full dir of everything on c:, files and folders
+	
+$x = get-content c:\windows\system32\drivers\etc\hosts  				get content grabs the content of path, which then sends it to the varaible of $x
+	
+Stop-Computer -Force									Shuts Down computer
+
+
+get-help										alias /?
+
+get-command										returns avaliable commands.
+
+get-member: 										tells you the data type of vaulue you give, and shows what tools are availabile. 
+
+test-path										returns true or fasle if the given destination exists. 
+
+set-date -date "2023-09-14"								change date to ....
+
+set-date -adjust 1:00:0   								adjusts time ahead by 1 hour
+		
+(Get-Date).ToString("HH:mm:ss.fff")							display the current time without the date
+
+w32tm /resync										sends computer command to sync clock
+
+$x.gettype()										returns data type for $x
+	
+Set-ExecutionPolicy Restricted								helps protect against malicous scripts
+
+set-content -path C:\ps\frog.txt -Value  "bradyrogers"					Overwrites file
+
+add-content -path C:\ps\frog.txt -Value  "rvie"						Appends to file
+
+get-content										type alias
+
+Get-Service | convertto-html | out-file -FilePath C:\ps\gs.html				converts get-service output to html file
+
+get-service |Where-Object {$psitem.Status -eq 'running'}				sends get-service to where-object which filters by the boolean value "status"
+
+sort-object										sorts the objects by members
+
+select-object										shows only the specified members
+
+Get-ChildItem C:\Windows\System32 -Directory -Recurse     				Show all folders below system32 no files
+
+get-childitem C:\windows\System32 -file |sort-object extension -descending		show all files in C:\windows\system32, sorted by extension and in reverse order.
+
+stop-service, start-service
+
+start-sleep -seconds 10									tells computer to wait 10 seconds before moving on. 
+
+$A = get-service -name spooler					
+if ($a.status -eq "running") {stop-service spooler}
+
+
+
+https://www.javatpoint.com/powershell-while-loop
+
+
+
+$a= "the frog jumped over the log"
+
+$a.Contains("frog")	checks for 'frog'				if spooler is running than {stop-service spooler}
+
+
+
+ $userEntry = Read-Host "Enter a 4-digit door entry code"			Read-host lets you stop script to ask for input

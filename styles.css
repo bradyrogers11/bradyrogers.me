@@ -1,0 +1,537 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'kumbh sans', sans-serif;
+  }
+  
+  .navbar {
+    background: #131313;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+  }
+  
+  .navbar__container {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 50px;
+  
+  }
+
+  .donation {
+    display: block;
+    margin: 0 auto;
+    max-width: 85%;
+    
+    vertical-align: text-bottom;
+    
+    
+  }
+  
+  
+  #navbar__logo {
+    background-color: #ff8177;
+    background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 2rem;
+  }
+
+
+
+  
+  .fa-gem {
+    margin-right: 0.5rem;
+  }
+  
+  .navbar__menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    text-align: center;
+  }
+  
+  .navbar__item {
+    height: 80px;
+    
+  }
+  
+  .navbar__links {
+    color: #ffffff ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    padding: 0  1rem;
+    height: 100%;
+  }
+  
+  .navbar__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+    width: 100%;
+  }
+  
+  .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    padding: 10px 20px;
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    background: #330fff;
+    color: #fff;
+  }
+  
+  .button:hover {
+    background: #330fff;
+    transition: all 0.3s ease;
+  }
+  
+  .navbar__links:hover {
+    background: #4837ff;
+    transition: all 0.3s ease;
+  }
+  
+  
+ /* Navbar toggle */
+.navbar__toggle {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(-100%, -50%);
+    cursor: pointer;
+    display: none;
+  }
+  
+  .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #ffffff;
+    margin: 5px auto;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .change .bar:nth-child(1) {
+    transform: translate(0px, 6px) rotate(45deg);
+  }
+  
+  .change .bar:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .change .bar:nth-child(3) {
+    transform: translate(0px, -6px) rotate(-45deg);
+  }
+  
+  /* Media query for responsive design */
+  @media screen and (max-width: 1680px) {
+    .navbar__container,
+    .navbar__menu {
+      padding: 0 1rem;
+    }
+  
+    /* Show navbar toggle button */
+    .navbar__toggle {
+      display: block;
+    }
+  
+  .navbar__links:hover {
+    background-color: #4837ff;
+    transition: all 0.3s ease;
+  }
+    .navbar__menu {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 100%;
+      height: 100vh;
+      background-color: #222;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      transition: transform 0.3s ease-in-out;
+    }
+  
+    .navbar__menu.active {
+      right: 0;
+      transform: translateX(0);
+    }
+  
+    .navbar__item {
+      margin-bottom: 1rem;
+    }
+  
+    .navbar__btn {
+      margin-bottom: 1rem;
+    }
+    img {
+      margin-top: -400px;
+    }
+  }
+  
+  .resume {
+    font-family: Arial, sans-serif;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 2rem;
+
+
+  }
+  .resume a {
+    color: #ff6600; /* Set the color to a brighter shade, you can adjust the hex color code as needed */
+  }
+
+  .menufile {
+    font-family: Arial, sans-serif;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+  .menufile a {
+    color: #ff5900; /* Set the color to a brighter shade, you can adjust the hex color code as needed */
+    display: block; /* Make the links block-level elements */
+    margin-bottom: 10px; /* Add margin below each link */
+    padding: 0.5rem; /* Adjust the padding as needed */
+  }
+  
+  .journal {
+    font-family: Arial, sans-serif;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+  .journal h2 {
+    margin-bottom: 2rem; /* Increase margin between each journal entry */
+  }
+  
+  .journal p {
+    margin-bottom: 1.5rem; /* Increase margin between paragraphs within each journal entry */
+  }
+  .journal a {
+    display: block; /* Make the links block-level elements */
+    margin-bottom: 1rem; /* Add margin to the bottom of each link */
+    color: #ff6600; /* Set the color to a brighter shade, you can adjust the hex color code as needed */
+  }
+  
+
+  body {
+    background-color: black;
+    color: white;
+  }
+  
+  h1, h2, h3 {
+    margin: 0 0 1rem;
+  }
+  
+  .contact-info {
+    margin-bottom: 2rem;
+  }
+  
+  ul {
+    list-style: disc;
+    margin: 0 0 1rem;
+    padding-left: 2rem;
+  }
+  
+  li {
+    margin-bottom: 0.5rem;
+  }
+  
+  p {
+    margin: 0 0 1rem;
+  }
+  
+  @media only screen and (max-width: 1300px) {
+
+    .header {
+      margin-top: 200px;
+      width: 90%;
+      height: 90%;
+    
+    }
+      
+    
+  
+    
+    }
+  
+    .popup-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 9999;
+      background-color: rgba(0, 0, 0, 0.6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .navbar__links:hover {
+    background-color: #4837ff;
+    transition: all 0.3s ease;
+  }
+    .popup-container {
+      background-color: rgba(255, 255, 255, 0.219);
+      padding: 20px;
+      max-width: 700px; /* Change to your desired size */
+      width: 90%;
+      height: 90%;
+      text-align: center;
+      position: relative;
+    }
+    
+    .left {
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 20px;
+    }
+    
+    .left img {
+      max-width: 100%;
+      height: auto;
+    }
+    
+    .right {
+      display: inline-block;
+      vertical-align: middle;
+      text-align: left;
+    }
+    
+    .skip-button {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-size: 18px;
+      color: #ffffff;
+    }
+    
+    .button1 {
+      display: block;
+      margin: 20px auto 0;
+      background-color: #ffffff;
+      border: none;
+      color: rgb(0, 0, 0);
+      font-size: 50px;
+      height: 150px;
+      width: 220px;
+      margin-top: 85px;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: bold;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    
+    .popup-container .left img {
+      max-width: 80%;
+      height: auto;
+    }
+
+
+    .nelkad {
+
+
+      margin-top: 200px;
+      width: 1300px;
+      height: auto;
+    }
+
+    .switchcommands {
+
+      margin-top: 40px;
+      margin-left: 80px;
+    }
+
+    .routercommands {
+
+      margin-top: 40px;
+      margin-left: 80px;
+    }
+
+    @media only screen and (max-width: 868px) {
+      .popup-container {
+        max-width: 90%;
+        height: 80%;
+        padding: 10px;
+      }
+      
+      .button1 {
+        font-size: 30px;
+        height: 80px;
+        width: 150px;
+        margin-top: 50px;
+      }
+      
+      .left img {
+        max-width: 60%;
+
+      }
+      .navbar__links:hover {
+    background-color: ##4837ff;
+    transition: all 0.3s ease;
+  }
+      
+      .popup-container .left img {
+        max-width: 70%;
+      }
+      
+      .nelkad {
+        margin-top: 20px;
+        width: 98%;
+      }
+      .popup-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 9999;
+      background-color: rgba(0, 0, 0, 0.6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    }
+    
+    
+    @media only screen and (max-width: 2580px) {
+      /* CSS for 16 inch MacBook */
+      .popup-overlay {
+        background-color: rgba(0, 0, 0, 0.6);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 9999;
+      }
+      
+      .popup-container {
+        background-color: rgba(255, 255, 255, 0.219);
+        max-width: 700px; /* Change to your desired size */
+        width: 90%;
+        height: 90%;
+        text-align: center;
+        position: relative;
+        padding: 20px;
+      }
+      
+      .left {
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 20px;
+      }
+      
+      .left img {
+        max-width: 100%;
+        height: auto;
+      }
+      
+      .right {
+        display: inline-block;
+        vertical-align: middle;
+        text-align: left;
+      }
+      
+      .skip-button {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 18px;
+        color: #fffff;
+      }
+      
+      .button1 {
+        display: block;
+        margin: 20px auto 0;
+        background-color: #ffffff;
+        border: none;
+        color: rgb(0, 0, 0);
+        font-size: 50px;
+        height: 150px;
+        width: 220px;
+        margin-top: 55px;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: bold;
+      }
+    
+      .img {
+        max-width: 100%;
+        height: auto;
+      }
+      
+      .popup-container .left img {
+        max-width: 80%;
+        height: auto;
+      }
+    
+    
+      .nelkad {
+        margin-top: 50px;
+        width: 1300px;
+        height: auto;
+
+        
+      }
+
+      
+    }
+    
+
+    .popup-overlay.hidden {
+      display: none;
+    }
+    
+  .centered {
+
+    margin-top: 50px;
+    margin-left: 100px;
+  }
+
+  .update {
+
+    margin-top: 50px;
+    margin-left: 100px;
+  }
+
+  .menufile {
+    margin-top: 40px;
+    margin-left: 80px;
+  
+  }
+  
