@@ -1,0 +1,10 @@
+# Normalize line endings
+* text=auto
+
+# Ensure deploy.bat uses CRLF on checkout for Windows
+deploy.bat text eol=crlf
+app.js text eol=lf
+styles.css text eol=lf
+*.html text eol=lf
+*.css text eol=lf
+*.js text eol=lf
